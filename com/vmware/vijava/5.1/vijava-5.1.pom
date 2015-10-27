@@ -1,5 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 		USX-49046 -->
 	<distributionManagement>
 		<repository>
 			<id>vijava_package</id>
@@ -7,6 +8,8 @@
 			<url>file://${project.build.directory}/vijava</url>
 		</repository>
 	</distributionManagement>
+	<!-- 		USX-49046 -->
+	
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vmware</groupId>
 	<artifactId>vijava</artifactId>
@@ -27,6 +30,7 @@
 	<properties>
 		<vijava-version>5120121125</vijava-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 		USX-49046 -->
 		<github.global.server>github</github.global.server>
 	</properties>
 
@@ -42,6 +46,7 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<!-- 		USX-49046 for mvn deploy -->
 			<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.8.1</version>
@@ -75,6 +80,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- 		USX-49046 for push to github-->
 		</plugins>
 	</build>
 
